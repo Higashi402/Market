@@ -1,0 +1,66 @@
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.api.impl.ReportEngine <init>
+FINE: ReportEngine created. EngineConfig: EngineConfig: logDest=logs;logLevel=FINEST;org.eclipse.birt.report.engine.api.EngineConfig.scriptObjects={};org.eclipse.birt.report.engine.api.EngineConfig.emitterConfigs={html=org.eclipse.birt.report.engine.api.HTMLEmitterConfig@667aaae2}; 
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.reportitemGeneration
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadGenerationExtensionDefns
+FINE: Load generation extension: Chart
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.reportitemPresentation
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadPresentationExtensionDefns
+FINE: Load prsentation extension: Chart
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.reportitemQuery
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadQueryExtensionDefns
+FINE: Load query extension: Chart
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.emitters
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load html emitter org.eclipse.birt.report.engine.emitter.html
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load pdf emitter org.eclipse.birt.report.engine.emitter.pdf
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load postscript emitter org.eclipse.birt.report.engine.emitter.postscript
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load ppt emitter org.eclipse.birt.report.engine.emitter.ppt
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load xls emitter org.eclipse.birt.report.engine.emitter.prototype.excel
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load doc emitter org.eclipse.birt.report.engine.emitter.word
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load docx emitter org.eclipse.birt.report.engine.emitter.docx
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load pptx emitter org.eclipse.birt.report.engine.emitter.pptx
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load odp emitter org.eclipse.birt.report.engine.emitter.odp
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load ods emitter org.eclipse.birt.report.engine.emitter.prototype.ods
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load odt emitter org.eclipse.birt.report.engine.emitter.odt
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load xlsx emitter uk.co.spudsoft.birt.emitters.excel.XlsxEmitter
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadEmitterExtensionDefns
+FINE: Load xls_spudsoft emitter uk.co.spudsoft.birt.emitters.excel.XlsEmitter
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.reportEventHandler
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.reportItemPreparation
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.dataExtraction
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadDataExtractionExtensions
+FINE: Load data extraction extension: org.eclipse.birt.report.engine.dataextraction.csv
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager getExtensions
+FINE: Start load extension point: org.eclipse.birt.report.engine.extendedItemFactory
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadExtendedItems
+FINE: Load extendedItem extension: Crosstab
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadExtendedItems
+FINE: Load extendedItem extension: CrosstabCell
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.extension.internal.ExtensionManager loadExtendedItems
+FINE: Load extendedItem extension: AggregationCell
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.api.impl.ReportEngine openReportDesign
+FINE: ReportEngine.openReportDesign: designName=src/main/resources/static/reports/report.rptdesign 
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.model.util.XMLParserPoolImpl createParser
+FINEST: created a new SAX parser
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.model.util.XMLParserPoolImpl createParser
+FINEST: created a new SAX parser
+апр. 01, 2025 5:43:19 PM org.eclipse.birt.report.engine.api.impl.ReportEngineHelper getReportDesignHandle
+SEVERE: invalid design file file:/C:/Users/Higashi/Desktop/Radick/C4S2/БД/market/src/main/resources/static/reports/report.rptdesign

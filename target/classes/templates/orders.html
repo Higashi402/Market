@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Мои заказы</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+<div th:insert="~{common/fragments :: header}"></div>
+
+<main class="orders-container">
+  <div class="orders-header">
+    <h1>Мои заказы</h1>
+    <div class="report-actions">
+      <form method="post" th:action="@{/report-orders}" class="report-button">
+        <input type="submit" value="pdf">
+      </form>
+      <!--
+      <a th:href="@{/report-orders}" class="report-button">
+        <img src="/img/pdf.png" alt="PDF" width="20"> 2
+      </a> -->
+
+    </div>
+  </div>
+
+  <div class="orders-list">
+    <div th:each="order : ${orders}" class="order-item">
+      <div class="order-header">
+        <span class="order-number">Заказ #<span th:text="${order.number}"></span></span>
+        <span class="order-status" th:text="${order.status}"></span>
+      </div>
+
+      <div class="order-details">
+        <p>Товар: <span th:text="${order.nomenclature}"></span></p>
+        <p>Карта: <span th:text="${order.card}"></span></p>
+        <p>Дата создания:
+          <span th:text="${order.creationDate}"></span>
+        </p>
+      </div>
+    </div>
+
+    <div th:if="${#lists.isEmpty(orders)}" class="no-orders">
+      У вас пока нет заказов
+    </div>
+  </div>
+</main>
+
+<div th:insert="~{common/fragments :: footer}"></div>
+
+</body>
+</html>

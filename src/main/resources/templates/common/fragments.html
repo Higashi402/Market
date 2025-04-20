@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<footer th:fragment="footer">
+  <p>&copy; 2025 Citri – Все права защищены (Разработчик: Тулюков В.С.)</p>
+  <div class="social-icons">
+    <a href="https://vk.com/whatislove_pdp"><img src="/img/vk.png" alt="vk"></a>
+    <a href="https://wa.me/79156288729"><img src="/img/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://t.me/WIL_PDP"><img src="/img/tg.png" alt="tg"></a>
+  </div>
+</footer>
+
+<header th:fragment="header">
+  <div class="logo">
+    <img src="/img/logo.png" alt="Логотип магазина">
+    <h1>Citri</h1>
+  </div>
+
+  <form action="/search" method="get" class="search-form">
+    <input type="text" placeholder="Найти товар..." name="query" required>
+    <button type="submit">🔍</button>
+  </form>
+
+  <nav>
+    <ul>
+      <li><a href="/market">Главная</a></li>
+      <li><a href="/catalog">Каталог</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li sec:authorize="isAuthenticated()">
+        <a href="/orders-my">Мои заказы</a>
+      </li>
+      <li sec:authorize="!isAuthenticated()">
+        <a href="/login">Войти</a>
+      </li>
+
+      <li sec:authorize="isAuthenticated()">
+        <form th:action="@{/logout}" method="post">
+          <button type="submit">Выйти</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<aside class="filters-menu" th:fragment="filters">
+  <h3>Фильтры</h3>
+  <div class="filter">
+    <label>Цена:</label>
+    <div class="price-inputs">
+      <input type="number" id="minPrice" name="minPrice" min="0" max="200000" step="1000" value="0" placeholder="От">
+      <span>—</span>
+      <input type="number" id="maxPrice" name="maxPrice" min="0" max="200000" step="1000" value="200000" placeholder="До">
+    </div>
+  </div>
+
+  <div class="filter">
+    <label>Срок доставки:</label>
+    <div class="delivery-filters">
+      <label><input type="radio" name="deliveryTime" value="any" checked> Любой</label><br>
+      <label><input type="radio" name="deliveryTime" value="1"> Завтра</label><br>
+      <label><input type="radio" name="deliveryTime" value="2"> Послезавтра</label><br>
+    </div>
+  </div>
+
+  <button class="show-filters-btn" onclick="applyFilters()">Показать</button>
+
+
+  <form method="post" th:action="@{/report-products}" class="report-button-products">
+    <input type="submit" value="pdf">
+  </form>
+</aside>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог – Citri</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script src="/js/scripts.js"></script>
+</head>
+<body>
+
+<div th:insert="~{common/fragments :: header}"></div>
+
+<main>
+  <div class="catalog-container">
+    <div th:insert="~{common/fragments :: filters}"></div>
+
+    <!-- Каталог товаров -->
+    <section class="catalog">
+      <th:block th:each="product : ${products}">
+        <div class="card">
+          <a th:href="@{'/product/' + ${product.articleNumber}}">
+            <img th:src="@{'img/products/' + ${product.image} + '.jpg'}" alt="Изображение">
+            <h2 th:text="${product.title}"></h2>
+          </a>
+          <span class="price" th:text="${product.price} + ' ₽'"></span>
+          <button>Купить</button>
+        </div>
+      </th:block>
+    </section>
+  </div>
+</main>
+
+<div th:insert="~{common/fragments :: footer}"></div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${product.title}"></title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+<div th:insert="~{common/fragments :: header}"></div>
+
+<main>
+  <div class="product-container">
+    <div class="product-content">
+      <div class="product-image-container">
+        <img class="product-image" th:src="@{'/img/products/' + ${product.image} + '.jpg'}" alt="Изображение">
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title" th:text="${product.title}"></h1>
+        <p class="product-sku">Артикул: <span th:text="${product.articleNumber}"></span></p>
+        <p class="product-description" th:text="${product.description}"></p>
+      </div>
+
+      <div class="product-buy">
+        <span class="product-price" th:text="${product.price} + ' ₽'"></span>
+
+        <!-- Форма для создания заказа -->
+        <form th:action="@{'/product/' + ${product.articleNumber} + '/order'}" method="post">
+          <button type="submit" class="buy-button">Купить</button>
+        </form>
+
+        <!-- Сообщения об ошибках/успехе -->
+        <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
+        <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div th:insert="~{common/fragments :: footer}"></div>
+
+</body>
+</html>
+
